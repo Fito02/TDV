@@ -1,0 +1,79 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.6.11
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema servidor
+--
+
+CREATE DATABASE IF NOT EXISTS servidor;
+USE servidor;
+
+--
+-- Definition of table `mensajes`
+--
+
+DROP TABLE IF EXISTS `mensajes`;
+CREATE TABLE `mensajes` (
+  `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Texto` varchar(900) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `mensajes`
+--
+
+/*!40000 ALTER TABLE `mensajes` DISABLE KEYS */;
+INSERT INTO `mensajes` (`Id`,`Texto`) VALUES 
+ (1,'24.0'),
+ (2,'224.0');
+/*!40000 ALTER TABLE `mensajes` ENABLE KEYS */;
+
+
+--
+-- Definition of table `operaciones`
+--
+
+DROP TABLE IF EXISTS `operaciones`;
+CREATE TABLE `operaciones` (
+  `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `num1` varchar(45) NOT NULL,
+  `num2` varchar(45) NOT NULL,
+  `Operacion` varchar(45) NOT NULL,
+  `resultado` varchar(45) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `operaciones`
+--
+
+/*!40000 ALTER TABLE `operaciones` DISABLE KEYS */;
+INSERT INTO `operaciones` (`Id`,`num1`,`num2`,`Operacion`,`resultado`) VALUES 
+ (1,'12','3','+','15.0'),
+ (2,'12','33','-','-21.0');
+/*!40000 ALTER TABLE `operaciones` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
